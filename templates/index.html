@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}首页 · Flask 学习小站{% endblock %}
+{% block content %}
+<section class="welcome">
+  {% if name %}
+  <p class="eyebrow">登录成功 / {{ session.get('login_method') }}</p>
+  <h1>欢迎{{ name }}同学回来</h1>
+  <p>已完成账号验证，欢迎继续学习 Flask。</p>
+  {% else %}
+  <p class="eyebrow">模板 · 表单 · 数据交互</p>
+  <h1>欢迎来到学习小站</h1>
+  <p>从登录页面开始，体验浏览器与 Flask 之间的数据传递。</p>
+  <a class="button" href="{{ url_for('login') }}">进入登录页</a>
+  {% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}登录 · Flask 学习小站{% endblock %}
+{% block content %}
+<section class="login-section">
+  <p class="eyebrow">第四章与第五章课堂实验</p>
+  <h1>用户登录</h1>
+  <p>教学账号：<strong>admin</strong>　密码：<strong>123456</strong></p>
+  <div class="forms">
+    <article class="card">
+      <h2>POST 登录</h2><p>通过请求体传递表单数据。</p>
+      <form method="post" action="{{ url_for('login') }}">
+        <label for="post-user">用户名</label>
+        <input id="post-user" name="username" autocomplete="username" required>
+        <label for="post-pass">密码</label>
+        <input id="post-pass" name="password" type="password" autocomplete="current-password" required>
+        <button class="button" type="submit">使用 POST 登录</button>
+      </form>
+    </article>
+    <article class="card">
+      <h2>GET 演示</h2><p>参数出现在网址中，仅使用上面的教学账号。</p>
+      <form method="get" action="{{ url_for('login') }}">
+        <input type="hidden" name="submitted" value="1">
+        <label for="get-user">用户名</label>
+        <input id="get-user" name="username" autocomplete="off" required>
+        <label for="get-pass">密码</label>
+        <input id="get-pass" name="password" type="password" autocomplete="off" required>
+        <button class="button secondary" type="submit">使用 GET 演示登录</button>
+      </form>
+    </article>
+  </div>
+</section>
+{% endblock %}

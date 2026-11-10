@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Flask 登录实验{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header><a class="brand" href="{{ url_for('index') }}">Flask 学习小站</a>
+    <nav aria-label="主导航">
+      <a href="{{ url_for('index') }}">首页</a>
+      {% if session.get('username') %}
+      <form method="post" action="{{ url_for('logout') }}"><button class="text-button">退出登录</button></form>
+      {% else %}<a href="{{ url_for('login') }}">登录</a>{% endif %}
+    </nav>
+  </header>
+  <main>
+    <div class="messages" role="status">
+      {% for message in get_flashed_messages() %}<p>{{ message }}</p>{% endfor %}
+    </div>
+    {% block content %}{% endblock %}
+  </main>
+  <footer>{% block footer %}Web 程序设计 · 模板与表单实验{% endblock %}</footer>
+</body>
+</html>

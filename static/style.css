@@ -1,0 +1,12 @@
+:root{font-family:"Microsoft YaHei",sans-serif;color:#193447;background:#f1f6f8;line-height:1.6}
+*{box-sizing:border-box}body{margin:0}header{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;background:white;border-bottom:1px solid #dbe5eb}
+a{color:#126778;text-decoration:none}.brand{font-weight:700;font-size:20px}nav{display:flex;align-items:center;gap:24px}nav form{margin:0}
+main{min-height:calc(100vh - 140px);position:relative;padding:40px 24px;display:flex;align-items:center;justify-content:center}
+.welcome{text-align:center;max-width:900px}.welcome h1{font-size:clamp(28px,4vw,48px);line-height:1.4;margin:14px 0}.eyebrow{color:#126778;font-size:14px;letter-spacing:2px}
+.messages{position:absolute;top:0;left:0;right:0;text-align:center;pointer-events:none}.messages p{display:inline-block;background:#dcefe8;padding:6px 24px;border-radius:6px}
+.login-section{width:900px;max-width:100%;padding:24px 0}.login-section>h1{font-size:32px;margin:8px 0}.forms{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+.card{background:white;border:1px solid #dbe5eb;border-radius:16px;padding:28px;box-shadow:0 8px 30px #19344708}.card h2{margin:0}.card p{color:#526977;min-height:52px}
+label{display:block;margin:16px 0 6px}input:not([type=hidden]){width:100%;padding:12px;border:1px solid #aabec9;border-radius:7px;font:inherit}
+.button{display:inline-block;background:#126778;color:white;border:0;border-radius:8px;padding:12px 24px;margin-top:24px;font:inherit;cursor:pointer}.card .button{width:100%}.secondary{background:#38566b}
+.text-button{background:none;border:0;color:#126778;cursor:pointer;font:inherit}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #e3a13b;outline-offset:4px}
+footer{height:64px;text-align:center;padding:20px;color:#607786;font-size:14px}@media(max-width:650px){.forms{grid-template-columns:1fr}header{padding:0 20px}.brand{font-size:16px}main{padding:40px 20px}.welcome{padding:40px 0}}
